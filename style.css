@@ -1,0 +1,161 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+  gap: 1px;
+  width: 500px;
+  height: 500px;
+  background-image: url(1.png);
+  background-size: cover;
+  z-index: 2;
+  top: 110px;
+}
+
+.container1 {
+  position: absolute;
+  right: 30%;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  border: 2px solid rebeccapurple;
+  border-radius: 10px;
+  background-color: #0b0d10;
+}
+
+.container12 {
+  display: flex;
+  padding: 2px;
+}
+
+.container21 {
+  display: flex;
+}
+
+.container2 {
+  position: absolute;
+  right: 30%;
+  top: 320px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid rebeccapurple;
+  border-radius: 10px;
+  background-color: #0b0d10;
+}
+body {
+  background-color: #2b2f34;
+  position: relative;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+.smallDiv {
+  font-weight: bold;
+  z-index: -1;
+}
+.color1 {
+  background-color: rgb(255, 158, 64);
+}
+.color2 {
+  background-color: rgb(154, 214, 215);
+}
+.color3 {
+  background-color: rgb(255, 232, 204);
+}
+.brownPawn {
+  background-image: url(brownPawn.png);
+  background-size: cover;
+  z-index: 2;
+}
+.blackPawn {
+  background-image: url(blackPawn.png);
+  background-size: cover;
+  z-index: 2;
+}
+button {
+  padding: 1em 2em;
+  margin: 10px;
+  border: 1 solid indianred;
+  background-color: #262b33;
+  color: #f0f0f0;
+  border-radius: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+}
+button::after {
+  content: "";
+  position: absolute;
+  height: 105%;
+  width: 105%;
+  border-radius: 1000px;
+  background-image: linear-gradient(to bottom right, #008cff, #e100ff);
+  z-index: -1;
+}
+button:hover {
+  z-index: 0;
+}
+.box1 {
+  height: 64px;
+  width: 64px;
+  display: flex;
+  margin: 10px;
+}
+.box2 {
+  height: 64px;
+  width: 64px;
+  display: flex;
+  margin: 10px;
+}
+h1 {
+  color: rgb(255, 25, 13);
+}
+
+@media only screen and (max-width: 600px) {
+  .container1 {
+    position: absolute;
+    right: 23%;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .container2 {
+    position: absolute;
+    right: 23%;
+    top: 760px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .Container {
+    position: absolute;
+    top: 230px;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.button-clicked {
+  animation-name: rotate;
+  animation-duration: 1s;
+}
+.Pawn2{
+  background-image: url(2Pawn.png);
+  background-size: cover;
+}
